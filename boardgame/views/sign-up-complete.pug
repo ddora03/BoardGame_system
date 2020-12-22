@@ -1,0 +1,23 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title 회원가입
+  link(rel='stylesheet' type='text/css' href='css/reset.css')
+  link(rel='stylesheet' type='text/css' href='css/style.css')
+.logo
+  img(src='' )
+.complete-wrap
+  header.complete
+    h1 가입 완료
+  a.to-main-arrow(href='/') 메인으로
+  dl.sign-up-info
+    dt 이름
+    dd #{name}
+    dt 아이디
+    dd #{id}
+  ul.complete-desc
+    li
+      | 위 내용은 
+      a(href='https://ceo.baemin.com/#/mypage') 내 정보 관리
+      | 에서 수정하실 수 있습니다.

@@ -1,0 +1,28 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title 메인
+  link(rel='stylesheet' type='text/css' href='css/reset.css')
+  link(rel='stylesheet' type='text/css' href='css/style.css')
+.logo
+  img(src='' )
+.signup-container
+  form(action='./add-user' method='POST' onsubmit="return handleFormSubmit()")
+    section#essential-info.form-section(name='essential-info')
+      h1 회원가입
+      h3 필수 정보를 입력해 주세요.
+      input#id.row(name='id' placeholder='아이디* (4~20자)')
+      p#error-id(class='error-message hidden')
+      input#password.row(type='password' name='password' placeholder='비밀번호* (영문+숫자, 8~20자)')
+      p#error-password(class='error-message hidden')
+      input#password-check.row(type='password' name='password-check' placeholder='비밀번호 재확인*')
+      p#error-password-check(class='error-message hidden')
+      input#name.row(name='name' placeholder='이름*')
+      p#error-name(class='error-message hidden')
+    button.row.button.solid.primary(type='submit') 가입완료
+script(type='text/javascript' src='https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js')
+script(type='text/javascript' src='js/option-info.js')
+script(type='text/javascript' src='js/terms.js')
+script(type='text/javascript' src='js/find-address.js')
+script(type='text/javascript' src='js/validation.js')

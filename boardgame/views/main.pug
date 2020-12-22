@@ -1,0 +1,30 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title 메인화면
+  link(rel='stylesheet' type='text/css' href='css/reset.css')
+  link(rel='stylesheet' type='text/css' href='css/style.css')
+.logo
+  img(src='' )
+.main-container
+  h1 Board Game
+  if userId
+    #notice #{userId}님, 반갑습니다! 
+    h2 .
+    button.row.button.solid.primary(onclick="location.href='./game'") 게임
+    button.row.button.solid.primary(onclick="location.href='./order'") 주문
+    button.row.button.solid.primary(onclick="location.href='./room'") 방
+    button.row.button.solid.primary(onclick="location.href='./user_check'") 내정보
+    button.row.button.solid.primary(onclick="location.href='./logout'") 로그아웃  
+  else
+    #notice 로그인해주세요!
+    button.row.button.solid.primary(onclick="location.href='./login'") 로그인  
+    .row
+      span.signup
+        a(href='./sign-up') 회원가입
+      span.find-id-password
+        a(href='#') 아이디
+        span /
+        a(href='#') 비밀번호 찾기
+
